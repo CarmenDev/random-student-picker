@@ -45,7 +45,7 @@ function updateHTML() {
 
         intervalCounter++;
 
-        if(intervalCounter > 10) {
+        if(intervalCounter > 30) {
             clearInterval(interval);
             document.getElementById('btn').innerText = "Go!";
         }
