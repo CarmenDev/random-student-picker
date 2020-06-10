@@ -71,7 +71,7 @@ to connect the output to our website.
 
 1. Inside the file `index.html`, create the HTML tag `<h1></h1>`.
 
-2. Create a new function which, when called, will call the the function you created in Assignment 1, passing in the array as a parameter. You could call this function "updateHTML".
+2. Call the function you created in Assignment 1, passing into the function the array value of student names. Wrap this function call inside a new function, you could call this function "updateHTML".
 
 3. Inside this function, access the `<h1></h1>` tag as an object from the DOM.
 
