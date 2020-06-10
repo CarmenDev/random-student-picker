@@ -21,3 +21,44 @@ const imageUrls = [
     'https://media.giphy.com/media/cO39srN2EUIRaVqaVq/source.gif'
 ];
 
+
+const students = ['Af', 'Alex', 'Carmen', 'Célia', 'David', 'Dominik', 'Edwin', 'Gülcin', 'Ishita', 'Jasmin', 'Mahmoud', 'Marzena', 'Max', 'Najeeb', 'Nicole', 'Osama', 'Prem', 'Rami', 'Saeed', 'Zaher'];
+
+
+
+function getRandomName(array) { 
+    return array[Math.floor(Math.random() * array.length)];
+}
+console.log(getRandomName(students)); 
+
+
+
+function updateHTML() {
+    const randomName = getRandomName(students);
+    const randomImage = getRandomImage(imageUrls);
+    let intervalCounter = 0;
+    document.getElementById('btn').innerText = "Who's next?";
+
+    const interval = setInterval(() => {
+        const randomName = students[Math.floor(Math.random() * students.length)];
+        header.textContent = randomName;
+
+        intervalCounter++;
+
+        if(intervalCounter > 30) {
+            clearInterval(interval);
+            document.getElementById('btn').innerText = "Go!";
+        }
+        
+    }, 100)
+
+
+    console.log(randomImage);
+    document.getElementById("header").innerText = randomName;
+    document.getElementById("image").setAttribute('src', randomImage);
+    
+}
+
+function getRandomImage(array){
+    return array[Math.floor(Math.random() * array.length)];
+}
